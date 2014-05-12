@@ -30,13 +30,12 @@ public class Scene2DFourSwords extends Scene2D{
 	@Override
 	public boolean checkTouch()
 	{
-		//if (CollisionDetect2D.collisionDetectAABBOnScreenPoint(link, Main.getTouchScreenX(), Main.getTouchScreenY()))
-		//{
+		// This is a test of GIT branches
+		// Moves link to location of touch and starts swinging animation
 		link.setTranslationValueX(Main.getTouchScreenX());
 		link.setTranslationValueY(Main.getTouchScreenY());
 		keyframeIndex = 0;
 		swinging = true;
-		//}
 		return false;
 	}
 	
