@@ -485,7 +485,7 @@ public class Text {
 		spriteDimensions[3] = 197;
 		letterModels[66] = new Model2D(spriteDimensions, gui);
 		
-		//Ã·
+		//÷
 		spriteDimensions[0] = 101;
 		spriteDimensions[1] = 113;
 		spriteDimensions[2] = 183;
@@ -837,7 +837,7 @@ public class Text {
 			return letterModels[65];
 		case('/'):
 			return letterModels[66];
-		case('Ã·'):
+		case('÷'):
 			return letterModels[67];
 		case('='):
 			return letterModels[68];

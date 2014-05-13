@@ -543,7 +543,7 @@ public abstract class Textbox extends Item2D{
 		}
 		
 		//These characters need to move to the center of the line
-		else if (character == '+' || character == '-' || character == '*' || character == 'Ã·' ||
+		else if (character == '+' || character == '-' || character == '*' || character == '÷' ||
 				character == '=' || character == ':' || character == '{' || character == '}' ||
 				character == '<' || character == '>' || character == '[' || character == ']' || character == '~')
 		{
