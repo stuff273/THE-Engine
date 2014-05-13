@@ -4,7 +4,9 @@ import theGameEngine.main.Main;
 import theGameEngine.models.Model3D;
 import android.content.res.AssetManager;
 
-public class ModelSet3DStart extends ModelSet3D{
+@SuppressWarnings("unused")
+public class ModelSet3DStart extends ModelSet3D
+{
 	
 	public static Model3D redCube = null;
 	public static Model3D monkeyBlue = null;
@@ -15,15 +17,17 @@ public class ModelSet3DStart extends ModelSet3D{
 		
 	AssetManager assets = null;
 
-	public ModelSet3DStart(AssetManager assets) {
-		redCube = new Model3D("redCube.ply", assets);
-		monkeyBlue = new Model3D("monkeyBlue.ply", assets);
-		group = new Model3D("group.ply", assets);
+	public ModelSet3DStart(AssetManager assets)
+	{
+		monkey = Model3D.newModel3DPoisitionDAE("monkey.dae", assets);
+		//redCube = new Model3D("redCube.ply", assets);
+		//monkeyBlue = new Model3D("monkeyBlue.ply", assets);
+		//group = new Model3D("group.ply", assets);
 		
-		Main.setTotalDataCount(redCube.getTotalDataCount() + monkeyBlue.getTotalDataCount() + group.getTotalDataCount());
-		redCube.collectAndBuild();
-		monkeyBlue.collectAndBuild();
-		group.collectAndBuild();
+		//Main.setTotalDataCount(redCube.getTotalDataCount() + monkeyBlue.getTotalDataCount() + group.getTotalDataCount());
+		//redCube.collectAndBuild();
+		//monkeyBlue.collectAndBuild();
+		//group.collectAndBuild();
 
 		//monkey = new ModelScene("monkey.ply",assets);
 		//modelMonkeyNoNormals = new Model("monkeyNoNormals.ply",assets);

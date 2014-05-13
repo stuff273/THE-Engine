@@ -160,9 +160,8 @@ public class Main extends Activity implements Renderer{
 		// Set up view matrix
 		updateViewMatrix();
 		
-		//========================================================================================================
 		// Sets up the OpenGL view
-		
+		//========================================================================================================
 		glView = new GLSurfaceView(this);
 		glView.setEGLContextClientVersion(2);
 		
