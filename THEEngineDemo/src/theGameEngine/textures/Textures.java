@@ -26,7 +26,7 @@ public class Textures {
 		} 
 		catch (IOException e)
 		{
-			throw new RuntimeException("Couldn't load texture"+filename, e);
+			throw new RuntimeException("Couldn't load texture "+filename, e);
 		} 
 		finally
 		{
@@ -45,8 +45,8 @@ public class Textures {
         return texturePixelDimensions;
 	}
 	
-	public static void generateAndBindTexture(Bitmap bitmap, int standardIntTextureValue, int textureMinifyingParam, int textureMagnifyingParam){
-		if (standardIntTextureValue < 0 || standardIntTextureValue > 15)
+	public static void generateAndBindTexture(Bitmap bitmap, int standardIntSlotValue, int textureMinifyingParam, int textureMagnifyingParam){
+		if (standardIntSlotValue < 0 || standardIntSlotValue > 15)
 			return;
 		
 		// int[] to hold the OpenGL generated texture (a lot like buffers)
@@ -57,7 +57,7 @@ public class Textures {
 		GLES20.glGenTextures(1, generatedTexture, 0);
 		
 		//Set the active texture to the value passed in (ex. GLES20.GL_TEXTURE0, GLES20.GL_TEXTURE1)
-		GLES20.glActiveTexture(getOpenGLTextureValue(standardIntTextureValue));
+		GLES20.glActiveTexture(getOpenGLTextureValue(standardIntSlotValue));
 		
 		//Bind the newly generated texture (Any change to a texture will now affect this bound texture)
 		GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, generatedTexture[0]);
